@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>welcome js</p> 
+   <script src="first.js" ></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Type something...">
+
+  <script>
+    const input = document.getElementById('myInput');
+
+    input.addEventListener('input', function(event) {
+      console.log(event.target.value);
+    });
+  </script>
+</body>
+</html> -->
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Event Listener Example</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+
+    <script>
+        // Get the button element
+        var button = document.getElementById("myButton");
+
+
+        // Function to handle button click
+        function handleButtonClick() {
+            button.style.backgroundColor = "orange";
+            console.log("Button CLicked");
+        }
+
+        // Add event listener to the button
+        button.addEventListener("click", handleButtonClick);
+
+        // Remove event listener after 5 seconds
+        setTimeout(function() {
+            button.removeEventListener("click", handleButtonClick);
+            alert("Event listener removed!");
+        }, 5000);
+    </script>
+</body>
+</html>

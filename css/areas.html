@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        padding: 3rem;
+        gap: 1rem;
+
+        grid-template-areas:
+        "head head side"
+        "cont1 cont2 side"
+        ;
+    }
+    .item{
+        background-color: aqua;
+        border: 3px solid black;
+    }
+    #head{
+        grid-area: head;
+    }
+    #side{
+        grid-area: side;
+    }
+    #cont1{
+        grid-area: cont1;
+    }
+    #cont2{
+        grid-area: cont2;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item" id="head" >head</div>
+        <div class="item" id="side">side</div>
+        <div class="item" id="cont1">cont1</div>
+        <div class="item" id="cont2">cont2</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+        
+        width: 100vw;
+        height: 100vh;
+        background-color: beige;
+        border: solid black 5px;
+    }
+    .box{
+        background-color: blue;
+        border: solid black 2px;
+        border-radius: 7px;
+        width: 250px;
+        height: 100px;
+        margin: 3px;
+        position: relative;
+        /* animation-name: rightmove;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+        /* animation-direction:alternate; */
+        /* animation-fill-mode: both; */ 
+        /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+        animation: 3s linear 2s infinite alternate none running rightmove;
+    
+        
+    }
+    @keyframes rightmove{
+        from{
+            top: 0%;
+            left: 0%;
+        }
+        to{
+            top: 0%;
+            left: 400px;
+        }
+    }
+    #box2{
+        background-color: blue;
+        border: solid black 2px;
+        border-radius: 7px;
+        width: 250px;
+        height: 100px;
+        margin: 3px;
+        position: relative;  
+        animation: 3s ease-in 2s infinite alternate none running leftmove;
+    }
+    @keyframes leftmove{
+        from{
+            top: 400px;
+            left: 400px;
+        }
+        to{
+            top: 400px;
+            left: 0;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" >
+            </div>
+            <div id="box2">
+
+            </div>
+            </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+       width: 100vw;
+       height: 100vh;
+       background-color: #000000;
+background-image: linear-gradient(160deg, #000000 0%, #8085d0 100%);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.card{
+
+width: 250px;
+height: 500px;
+border: solid black 1px ;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+padding-inline: 10px;
+}
+#img1{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#box1{
+    border: solid black 1px;
+    background-color:skyblue;
+    display: flex;
+    width: 200px;
+    gap: 10px;
+    padding: 2px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+#box2{
+    /* border: solid black 1px;
+    width: 200px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #170750;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 7px 10px 2px #170750; */
+}
+#box3{
+    font-size: 1.2rem;
+}
+
+#botton{
+    background-color: #170750;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 7px 10px 2px #170750;
+}
+
+</style>
+<body>
+    <div class="container" >
+        <div class="card" >
+            <img id="img1" src="com.jpeg" alt="com" width="250px" height="100px">
+            <h2>order summary</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptates quo nam at est eaque!</p>
+            <div id="box1" >
+                <img src="shopping-icon.jpg" alt="jh" width="40px" height="40px">
+                <h5>anual plan 99$ for sale</h5>
+                <a href="chang">change</a>
+            </div>
+            <div id="box2" >
+              <button id="botton">
+                proceed to pay
+              </button></div>
+            <div id="box3" >
+                <h4>cancel order</h4>
+            </div>
+    
+    </div>
+</body>
+</html>

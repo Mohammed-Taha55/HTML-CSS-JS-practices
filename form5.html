@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <fieldset>
+            <legend>application form</legend>
+            <label for="name">first name</label>
+            <input type="text"id="name" placeholder="first name">
+            <label for="name1">second name</label>
+            <input type="text"id="name1" placeholder="second name"><br/><br/>
+            <label for="date">date and time</label>
+            <input type="date"id="date">
+            <label for="age">age</label>
+            <input type="number" min="0" max="100" id="name" placeholder="age" ><br/><br/>
+            <label for="gender">gender</label>
+            <select name="gender" id="gender">
+                <option value="male">mard</option>
+                <option value="female">aurat</option>
+                <option value="chakka">gandu</option>
+            </select>
+            <label for="email">email address </label>
+            <input type="email"id="email" placeholder="enter email">
+
+        </fieldset>
+        <fieldset>
+            <legend>technical information</legend>
+            <p style="display: inline;">position available:</p>
+            <label for="junior">junior developer</label>
+            <input type="radio"id="junior">
+            <label for="senior">senior developer</label>
+            <input type="radio"id="senior">
+            <label for="advance">advance developer</label>
+            <input type="radio"id="advance"><br/>
+            <p style="display: inline;">programming languages:</p>
+            <label for="code1">web dev</label>
+            <input type="checkbox"id="code1">
+            <label for="code2">python</label>
+            <input type="checkbox"id="code2">
+            <label for="code3">dsa</label>
+            <input type="checkbox"id="code3">
+            </fieldset>
+            <fieldset>
+                <legend>password</legend>
+                <label for="pass">password:</label>
+            <input type="text"id="pass" placeholder="password">
+            <label for="pass1">conform password:</label>
+            <input type="text"id="pass1" placeholder="password">
+           </fieldset><br/>
+           <input type="submit"value="submit">
+           <input type="submit"value="reset">
+
+    </form>
+</body>
+</html>

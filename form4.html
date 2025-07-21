@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>complex form</h2>
+    <form>
+        <fieldset>
+            <legend>personal information</legend>
+           <label for="name1">Name</label>
+           <input type="text"id="name1"><br/><br/>
+           <label for="email1">Email</label>
+           <input type="email"id="email1"><br/><br/>
+           <label for="phone1">phone</label>
+           <input type="tel"id="phone1"><br/><br/>
+           <label for="date">date of birth</label>
+           <input type="date"id="date"><br/><br/>
+           <p style="display: inline;">gender</p>
+           <label for="gender1">male</label>
+           <input type="radio"name="gender1"id="gender1">
+           <label for="gender2">female</label>
+           <input type="radio"name="gender2"id="gender2"><br/><br>
+           <label for="country1">country</label>
+           <select name="country1" id="country1">
+            <option value="us">usa</option>
+            <option value="uk">ukc</option>
+            <option value="sa">sac</option>
+           </select>
+           </fieldset>
+        <fieldset>
+            <legend>address</legend>
+            <label for="street1">street</label>
+            <input type="text"id="street1">
+            <br/><br/>
+            <label for="city1">city</label>
+            <input type="text"id="city1">
+            <br/><br/>
+            <label for="state1">state</label>
+            <input type="text"id="state1">
+            <br/><br/>
+            <label for="code">zip code</label>
+            <input type="text"id="code">
+            <br/>
+        </fieldset>
+        <fieldset>
+            <legend>other information</legend>
+            <label for="comments">comment</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <label for="checkbox">i agree to the terms and condition</label>
+            <input type="checkbox"id="checkbox">
+        </fieldset>
+    </form>
+</body>
+</html>

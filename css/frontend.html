@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .header{
+        max-width: 1280px;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    .head1{
+        display: flex;
+        gap: 0.2rem;
+    }
+    .head2{
+        display: none;
+        gap: 0.8rem;
+       
+    }
+    @media screen and (min-width:760px){
+        .head2{
+            display: flex;
+        }
+    }
+    #button{
+        display: none;
+        width: 100px;
+        background-color: rgb(0, 78, 187);
+        border: solid 1px black;
+        border-radius: 5px;
+    }
+    @media screen and (min-width:760px){
+        #button{
+            display: block;
+        }
+    }
+    #name{
+        font-size: 1.5rem;
+        font-weight:bold;
+    }
+    #buton{
+        color: white;
+        text-decoration-line: none;
+    }
+    a,.head2{
+        text-decoration: none;
+        color: rgb(88, 81, 81);
+
+    }
+    #button:hover{
+        background-color:blue ;
+    }
+    .main{
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 0.6rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .leftbox{
+        text-align: center;
+        animation: sidefromleft 1s ease forwards;
+        opacity: 0;
+    }
+    @keyframes sidefromleft{
+        0%{
+opacity: 0;
+transform: translatex(-100%);
+        }
+        100%{
+          opacity: 1;
+          transform: translatex(0);
+        }
+    }
+    .section-label{
+        font-size: 1.1rem;
+        font-weight:600 ;
+        color: rgb(41, 41, 133);
+    }
+    .section-title{
+        font-size: 2.25rem;
+        padding: 1rem;
+    }
+    .section-desc{
+       color:  rgb(88, 81, 81);
+       font-size: 1.13rem; 
+    }
+    .button-group{
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+     #button2{
+        width: 100px;
+        background-color: rgb(0, 78, 187);
+        border: solid 1px black;
+        border-radius: 5px;
+        color: white;
+        margin-top: 2rem;
+        height: 30px;
+        transform: all 0.1s;
+    }
+   .buton2{
+    color: white;
+   }
+   #button2:hover{
+        background-color:blueviolet ;
+    }
+    .rightbox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-cont{
+        border-radius: 1.225rem;
+        overflow: hidden;
+        box-shadow:0px 4px 8px  rgba(0,0,0,0.1);
+        height: 50vh;
+
+    }
+    .section-image{
+        height: 100%;
+        width: 100%;
+    }
+    @media screen and (min-width:768px){
+        .main{
+            flex-direction: row;
+        }
+    }
+    .leftbox{
+        max-width:50%;
+        text-align: left;
+    }
+    .section-title{
+        padding: 0;
+    }
+    .button-group{
+        justify-content: start;
+        padding-left: 0%;
+    }
+    .section-label{
+        font-size: 1rem;
+    }
+    .section-title{
+        font-size: 4;
+    }
+    .section-desc{
+        font-size: 1rem;
+        color:  rgb(88, 81, 81);
+        width: 75;
+    }
+    .company-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        animation: sidefromleft 1s ease forwards;
+    }
+    .company-grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 3rem;
+        padding: 1rem;
+        background-color: lightgray;
+        border: none;
+        border-radius: 0.625em; 
+        margin-top: 1.5rem;
+        margin-bottom:10rem;
+        padding:1rem 2rem;
+       
+       }
+    .company-logo{
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--gray);
+        display: flex;
+        gap: 0.5rem;
+
+    }
+   .logo-text{
+     font-size: 1rem;
+   }
+   @media screen and (min-width:640px){
+    .company-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+   }
+   .comptitle{
+    font-size: 2rem;
+    font-weight: bold;
+   }
+   .featurecont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+   }
+   
+  .heading{
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 0.8rem;
+  }
+  .cards{
+   display: grid;
+   grid-template-columns:repeat(2,1fr);
+   gap: 1rem;
+   
+  }
+  @media screen and (max-width:640px){
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+  .card1{
+    border: black solid 1px;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card2{
+    border: black solid 1px;
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card3{
+    border: black solid 1px;
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card4{
+    border: black solid 1px;
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card5{
+    border: black solid 1px;
+    background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card6{
+    border: black solid 1px;
+    background-color: #FFFFFF;
+background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+  .fename{
+    font-size: 1.2rem;
+  }
+  .hero{
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .say{
+    margin: 20px;
+  }
+  .assem{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+  @media screen and (max-width:960px){
+    .assem{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+  .hero1{
+   border: 1px solid black;
+   background-color: lightgray;
+   width: 300px;
+   padding: 1rem;
+   border-radius: 0.3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+  }
+  #translatez:hover{
+    transform:perspective(300px) translatez(20px);
+  }
+  .hero2{
+   border: 1px solid black;
+   background-color: lightgray;
+   width: 300px;
+   padding: 1rem;
+   border-radius: 0.3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+  }
+  .hero3{
+   border: 1px solid black;
+   background-color:lightgray;
+   width: 300px;
+   padding: 1rem;
+   border-radius: 0.3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+  }
+  .heroimg{
+    border-radius: 1rem;
+  }
+  .name1{
+    color: #0010e9;
+  }
+  .q1{
+    font-weight: bold;
+  }
+
+   .footer-container{
+    margin: 0 auto;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+   }
+   .footer{
+    max-width: 1280px;
+    padding:1.2rem 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+   }
+   .footer-top{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   }
+   .svg{
+    width: 2.2rem;
+    height: 3rem;
+   }
+   .comp-logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: -1rem;
+   }
+   .logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.28rem;
+    font-weight: bolder;
+    color: black;
+   }
+   .social-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+   .filler-text{
+    font-size:1rem ;
+    color:#777;
+   }
+   .footer-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+    padding: 2rem 1rem;
+   }
+   .footer-grid-heading{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+   }
+   ul{
+    list-style-type:none;
+   }
+   .footer-links-lists{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   }
+   .footer-copyright{
+    color: gray;
+    font-size: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid #777;
+    margin-bottom: 1rem;
+   }
+   @media screen and (max-width:800px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top{
+        padding-left: 5rem;
+    }
+    .footer-grid{
+        align-self: center;
+        justify-content: space-evenly;
+    }
+   }
+   @media screen and (min-width:1000px) {
+       .footer-grid{
+        grid-template-columns: repeat(2,1fr);
+       }
+   }
+    
+   
+
+</style>
+<body>
+ 
+        <header class="header">
+            <div class="head1">
+                <img src="ink.webp" alt="ink" width="30px" height="30px">
+                <span id="name" >StudySync</span>
+            </div>
+                <div class="head2">
+                    <a href="#">home</a>
+                    <a href="#">feature</a>
+                    <a href="#">pricing</a>
+                    <a href="#">blog</a>
+                    <a href="#">about</a>
+                </div>
+                <button id="button"><a href="#" id="buton"> Contact Us </a></button>
+             </header>
+             <div class="content">
+                  <section class="main">
+                   <div class="leftbox">
+                     <p class="section-label">very proud to aunounce</p>
+                     <h1 class="section-title">seamless learning for bright futures</h1>
+                     <p class="section-desc" >Lorem ipsum dolor sit amet. ipsum dolor sit, amet consectetur adipisicing elit. Id quam aspernatur magni dolore dolor exercitationem?</p>
+                     <div class="button-group">
+                        <button id="button2"><a href="start" class="buton2">start Now</a></button>
+                        <button id="button2"><a href="tour" class="buton2">Take Tour</a></button>
+                     </div>
+                   </div>
+                   <div class="rightbox">
+                     <div class="image-cont">
+                        <img src="com.jpeg" alt="img"
+                        class="section-image"/>
+                     </div>
+                   </div>
+                  </section>    
+                    <div class="company-cont">
+                        <h2 class="comptitle">Trusted by the best</h2>
+                        <div class="company-grid">
+                        <div class="company-logo">
+                            <img src="goog.jpg" class="svgimg" width="30px" height="30px"/>
+                            <span class="logo-text" >Google</span>
+                        </div>
+                        <div class="company-logo">
+                            <img src="micro.png" class="svgimg" width="30px" height="30px"/>
+                            <span class="logo-text" >Microsoft</span>
+                        </div>
+                        <div class="company-logo">
+                            <img src="link.jpg" class="svgimg" width="30px" height="30px"/>
+                            <span class="logo-text" >Linkedin</span>
+                        </div>
+                        </div>
+                    </div>    
+                    <div class="featurecont">
+                        <div class="cardhead">
+                        <h2 class="heading">Our competitive advantage</h2>
+                        <p class="titing">Lorem ipsum ipsum dolor sit amet consectetur, adipisicing elit. Ullam sequi distinctio magni!</p>
+                    </div>
+                    <div class="cards">
+                    <div class="card1">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">personised leraning</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                    <div class="card2">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">Affordability</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                    <div class="card3">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">industry partnership</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                    <div class="card4">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">innovative technology</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                    <div class="card5">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">Responsive support</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                    <div class="card6">
+                        <img src="growth.jpg" alt="g" width="30px" height="30px">
+                        <h3 class="fename">insights</h3>
+                        <p class="fedes">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ex? Ullam, non?</p>
+                    </div>
+                </div>
+                </div>
+                <div class="hero">
+                    <h2 class="say">what heros say About us</h2>
+                    <div class="assem">
+                        <div class="hero1" id="translatez">
+                            <p class="hpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+                            <img src="taha.jpg" class="heroimg" alt="taha" width="40px" height="40px"/>
+                            <h4 class="name1">Taha hero</h4>
+                            <p class="q1">CEO of universe</p>
+                        </div>
+                        <div class="hero2" id="translatez">
+                            <p class="hpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+                            <img src="taha.jpg"  class="heroimg" alt="taha" width="40px" height="40px"/>
+                            <h4 class="name1">Taha legend</h4>
+                            <p class="q1">CEO of galaxy</p>
+                        </div>
+                        <div class="hero3" id="translatez">
+                            <p class="hpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+                            <img src="taha.jpg"  class="heroimg" alt="taha" width="40px" height="40px"/>
+                            <h4 class="name1">Taha master</h4>
+                            <p class="q1">CEO of multiuniverse</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="footer-container">
+                    <footer class="footer">
+                 <div class="footer-top">
+            <div class="comp-logo">
+                <a class="logo-link">
+                    <img class="svg" src="ink.webp" width="30px" height="30px"/>
+                   StudySync
+                </a>
+                </div>
+                <p class="filler-text">seamless learning for future</p>
+                <div class="social">
+                    <a class="social-link">
+                  <img src="goog.jpg" class="social-icon" width="30px" height="30px"/>
+                    </a>
+                    <a class="social-link">
+                        <img src="micro.png" class="social-icon" width="30px" height="30px"/>
+                          </a>
+                          <a class="social-link">
+                            <img src="link.jpg" class="social-icon" width="30px" height="30px" />
+                              </a>
+                       </div>
+                </div>
+                
+                <div class="footer-grid">
+                    <!-- column 1 -->
+                    <div class="footer-grid-column">
+                        <div class="footer-grid-heading">
+                            products
+                        </div>
+                        <ul class="footer-links-lists">
+                            <li>
+                                <a href="#o" class="overview">overview</a>
+                             </li>
+                             <li>
+                                <a href="#o" class="overview">solutions</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">pricing</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">customers</a>
+                              </li>
+                                
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-grid">
+                    <!-- column 2 -->
+                    <div class="footer-grid-column">
+                        <div class="footer-grid-heading">
+                            company
+                        </div>
+                        <ul class="footer-links-lists">
+                            <li>
+                                <a href="#o" class="overview">About</a>
+                             </li>
+                             <li>
+                                <a href="#o" class="overview">investors</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">jobs</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">press</a>
+                              </li>
+                                
+                              <li>
+                                <a href="#o" class="overview">blog</a>
+                              </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-grid">
+                    <!-- column 3 -->
+                    <div class="footer-grid-column">
+                        <div class="footer-grid-heading">
+                            support
+                        </div>
+                        <ul class="footer-links-lists">
+                            <li>
+                                <a href="#o" class="overview">contact</a>
+                             </li>
+                             <li>
+                                <a href="#o" class="overview">Document</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">chat</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">FAQ</a>
+                              </li>
+                                
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-grid">
+                    <!-- column 4 -->
+                    <div class="footer-grid-column">
+                        <div class="footer-grid-heading">
+                            Legal
+                        </div>
+                        <ul class="footer-links-lists">
+                            <li>
+                                <a href="#o" class="overview">Terms</a>
+                             </li>
+                             <li>
+                                <a href="#o" class="overview">policy</a>
+                              </li>
+                              <li>
+                                <a href="#o" class="overview">cooke</a>
+                              </li>
+                    </ul>
+                    </div>
+                </div>
+                </footer>
+            </div>
+        
+                </div>
+                    <div class="footer-copyright">
+                 2021 - present StudySync. All rights reserved.
+                    </div>
+                </div>
+                </div>
+            </body>
+            </html>
+         
